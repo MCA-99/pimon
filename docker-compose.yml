@@ -1,0 +1,42 @@
+version: "3"
+services:
+  pimon:
+    image: php:7-apache
+    container_name: pimon_php-apache
+    volumes:
+      - ./web:/var/www/html
+    links:
+      - mysql
+    command: "bash -c 'docker-php-ext-install mysqli && docker-php-ext-enable mysqli && apachectl restart && tail -f /dev/null'"
+    command: "bash -c 'docker-php-ext-install mysqli && docker-php-ext-enable mysqli && docker-php-ext-install pdo pdo_mysql && apachectl restart && tail -f /dev/null'"
+
+  mysql:
+    image: hypriot/rpi-mysql
+    container_name: pimon_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: db
+      MYSQL_USER: mca
+      MYSQL_PASSWORD: 12345
+    volumes:
+      - ./mysql:/var/lib/mysql
+    ports:
+      - "3306:3306" 
+
+  phpmyadmin:
+    image: jackgruber/phpmyadmin
+    container_name: pimon_phpmyadmin
+    restart: always
+    links:
+      - mysql
+    ports:
+      - 8083:80
+    environment:
+      MYSQL_USERNAME: root
+      MYSQL_ROOT_PASSWORD: root
+      PMA_HOST: pimon_mysql
+
+networks:
+  default:
+    external:
+      name: haproxy_default

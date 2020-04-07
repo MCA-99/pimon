@@ -1,0 +1,64 @@
+hr {
+    width: 100%;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 27vw;
+    margin: 0px auto;
+    padding: 1.5rem;
+    min-width: max-content;
+}
+
+.title_text {
+    font-size: x-large;
+    vertical-align: middle;
+}
+
+.content {
+    margin-left: 3rem;
+    min-width: max-content;
+}
+
+/* Version */
+.version_icon {
+    width: 60px;
+    height: 70px;
+    margin-right: 1rem;
+}
+
+/* Uptime */
+.uptime_icon {
+    width: 60px;
+    height: 60px;
+    margin-right: 1rem;
+}
+
+/* Cpu */
+.cpu_icon {
+    width: 60px;
+    height: 60px;
+    margin-right: 1rem;
+}
+
+/* Temperature */
+.temperature_icon {
+    width: 60px;
+    height: 65px;
+    margin-right: 1rem;
+}
+
+/* Memory */
+.memory_icon {
+    width: 70px;
+    height: 70px;
+}
+
+/* Storage */
+.storage_icon {
+    width: 60px;
+    height: 60px;
+    margin-right: 1rem;
+}
