@@ -24,9 +24,9 @@ $ docker-compose up -d
 ```
 
 ### Docker
-PiMonis very easy to install and deploy in a Docker container.
+PiMon is very easy to install and deploy in a Docker container.
 
-By default, the Docker will expose port 80, so change this within the Dockerfile if necessary.
+By default, the Docker will expose port 80, so change this within the docker-compose.yml if necessary.
 
 ```sh
 cd pimon
