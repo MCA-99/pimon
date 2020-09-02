@@ -18,7 +18,7 @@
                 <a class="navbar-brand" href="../index.php">PiMon</a>
                 </div>
                 <ul class="nav navbar-nav">
-                <li><a href="../status/index.php">Status</a></li>
+                <li><a href="../index.php">Status</a></li>
                 <li class="active"><a href="">Actions</a></li>
                 <li><a href="../configuration/index.php">Configuration</a></li>
                 <li><a href="../about/index.php">About</a></li>

@@ -18,15 +18,12 @@
                 <a class="navbar-brand" href="../index.php">PiMon</a>
                 </div>
                 <ul class="nav navbar-nav">
-                <li><a href="../status/index.php">Status</a></li>
+                <li><a href="../index.php">Status</a></li>
                 <li><a href="../actions/index.php">Actions</a></li>
                 <li class="active"><a href="">Configuration</a></li>
                 <li><a href="../about/index.php">About</a></li>
                 </ul>
             </div>
         </nav>
-        
-        
-
     </body>
 </html>

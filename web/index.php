@@ -5,38 +5,29 @@
         <title>PiMon</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="../css/login_style.css">
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
         <link rel="stylesheet" href="./css/bootstrap.min.css">
         <script src="./js/bootstrap.min.js"></script>
     </head>
-
-    <?php
-        include('./connection/config.php');
-
-        //$query = mysqli_query($conn, "SELECT * FROM users");
-        $query = $conn->prepare("SELECT * FROM users");
-        $query->execute();
-
-        foreach($query as $key => $row){
-            echo "sql-user: ".$row['username']."";
-        }
-
-        echo "user: ".$_POST['username']."<br/>";
-        echo "pass: ".$_POST['password']."<br/>";
-    ?>
-
     <body>
-        <div class="wrapper fadeInDown">
-            <div id="formContent">
-                <div class="separator">
-                    <h2>Login</h2>
+        <!-- Navbar -->
+         <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                <img src="./img/pimon_icon.png" class="pimon_icon" alt="pimon_icon">
+                <a class="navbar-brand" href="./index.php">PiMon</a>
                 </div>
-                <form method='POST' action='index.php'>
-                    <input type="text" id="username" class="fadeIn second" name="username" placeholder="username">
-                    <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
-                    <input type="submit" class="fadeIn fourth" value="Send">
-                </form>
+                <ul class="nav navbar-nav">
+                <li class="active"><a href="./index.php">Status</a></li>
+                <li><a href="./actions/index.php">Actions</a></li>
+                <li><a href="./configuration/index.php">Configuration</a></li>
+                <li><a href="./about/index.php">About</a></li>
+                </ul>
             </div>
-        </div>
+        </nav>
+        
+        <!-- Reload Status page every 5 seconds -->
+        <iframe src="./status/index.php" display="block" frameborder="0" height="885vh" width="100%"></iframe>
+
     </body>
 </html>
