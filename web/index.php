@@ -19,13 +19,10 @@
                 </div>
                 <ul class="nav navbar-nav">
                 <li class="active"><a href="./index.php">Status</a></li>
-                <li><a href="./actions/index.php">Actions</a></li>
-                <li><a href="./configuration/index.php">Configuration</a></li>
-                <li><a href="./about/index.php">About</a></li>
                 </ul>
             </div>
         </nav>
-        
+
         <!-- Reload Status page every 5 seconds -->
         <iframe src="./status/index.php" display="block" frameborder="0" height="885vh" width="100%"></iframe>
 
